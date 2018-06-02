@@ -29,17 +29,17 @@ export default {
     },
     methods: {
         loginCheck(){
-                //event.preventDefault();
+            //event.preventDefault();
 
-                firebase.auth().signInWithEmailAndPassword(this.userID, this.userPW).catch(function(error) {
-                    // Handle Errors here.
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    // ...
-                })
-                .then((result) => {
-                    this.$router.push('/weather');
-                });
+            firebase.auth().signInWithEmailAndPassword(this.userID, this.userPW).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+            })
+            .then((result) => {
+                this.$router.push('/weather');
+            });
         }
     }
 }
